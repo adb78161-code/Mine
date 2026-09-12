@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #12000a;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.intro {
+    animation: fadeIn 2s ease;
+}
+
+.heart {
+    font-size: 80px;
+    animation: heartbeat 1.2s infinite;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #ffc5d8;
+    margin-bottom: 35px;
+}
+
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #c2185b;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 25px rgba(255,255,255,0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #65002d, #12000a 65%);
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: reveal 1.5s ease;
+}
+
+.small-text {
+    color: #ffc1d7;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.photo-frame {
+    width: min(85vw, 360px);
+    height: min(105vw, 440px);
+    margin: auto;
+    padding: 8px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #fff, #ff69a5, #fff);
+    box-shadow: 0 0 40px rgba(255, 70, 140, 0.5);
+    animation: photoAppear 2s ease;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.title {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 28px;
+}
+
+.message {
+    margin: 25px auto 35px;
+    max-width: 430px;
+    line-height: 1.7;
+    color: #ffe3ed;
+    font-size: 17px;
+}
+
+.message strong {
+    color: #ff78a9;
+    font-size: 20px;
+}
+
+.final {
+    margin-top: 45px;
+    padding: 30px 15px;
+    animation: finalReveal 1.5s ease;
+}
+
+.big-heart {
+    font-size: 90px;
+    animation: heartbeat 1s infinite;
+}
+
+.final h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.final p {
+    color: #ffc5d8;
+    font-size: 16px;
+}
+
+/* Floating hearts */
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatUp linear forwards;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotate(-5deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes finalReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
