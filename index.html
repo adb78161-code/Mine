@@ -1,60 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You ❤️</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#09000d"
+    >
+
+    <title>Just For You ❤️</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Opening screen -->
-    <div id="opening" class="screen">
-        <div class="intro">
-            <div class="heart">❤️</div>
-            <h1>I made something for you...</h1>
-            <p>Don't close this yet 🥺</p>
-            <button id="openBtn">✨ Open Your Surprise ✨</button>
-        </div>
+    <!-- Animated background -->
+    <div class="background">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
     </div>
 
-    <!-- Surprise -->
-    <div id="surprise" class="hidden">
 
-        <div id="hearts"></div>
+    <!-- ========================= -->
+    <!-- PASSWORD SCREEN -->
+    <!-- ========================= -->
 
-        <div class="content">
+    <section id="loginScreen" class="screen">
 
-            <p class="small-text">For the most special girl in my world...</p>
+        <div class="login-card">
 
-            <!-- HER PHOTO -->
-            <div class="photo-frame">
-                <img src="her-photo.jpg" alt="My favorite person">
+            <div class="lock-icon">
+                🔐
             </div>
 
-            <h1 class="title">You make my world beautiful ❤️</h1>
+            <div class="sparkle">✦</div>
 
-            <p class="message">
-                I don't know if words can ever explain how special you are to me.
-                <br><br>
-                But if I could choose one person to keep smiling,
-                laughing and being happy forever...
-                <br><br>
-                <strong>I would choose you. ❤️</strong>
+            <h1>
+                Something is waiting for you...
+            </h1>
+
+            <p>
+                But only one special person can open it. ❤️
             </p>
 
-            <button id="loveBtn">💗 One More Thing...</button>
+            <div class="secret-hint">
+                🎂 Hint: Your special day
+            </div>
 
-            <div id="finalMessage" class="final hidden">
-                <div class="big-heart">❤️</div>
-                <h2>I Love You</h2>
-                <p>And I hope this little surprise made you smile. 🥰</p>
+            <input
+                type="password"
+                id="password"
+                inputmode="numeric"
+                maxlength="8"
+                placeholder="Enter the secret"
+                autocomplete="off"
+            >
+
+            <button id="unlockBtn">
+                ✨ Unlock
+            </button>
+
+            <div id="error"></div>
+
+            <div class="attempts">
+                <span id="attemptText"></span>
             </div>
 
         </div>
-    </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- INTRO SCREEN -->
+    <!-- ========================= -->
+
+    <section id="opening" class="screen hidden">
+
+        <div class="intro-card">
+
+            <div class="mini-hearts">
+                💕 💗 💕
+            </div>
+
+            <div class="giant-heart">
+                ❤️
+            </div>
+
+            <h1>
+                Hey, beautiful...
+            </h1>
+
+            <p>
+                I made a tiny little corner of the internet
+                just for you.
+            </p>
+
+            <button id="openBtn">
+                💌 Open Your Surprise
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- MAIN SURPRISE -->
+    <!-- ========================= -->
+
+    <main id="surprise" class="hidden">
+
+        <div id="particles"></div>
+
+        <div class="surprise-content">
+
+            <p class="eyebrow">
+                ✦ A little something from me to you ✦
+            </p>
+
+
+            <!-- PHOTO -->
+
+            <div class="photo-wrapper">
+
+                <div class="photo-glow"></div>
+
+                <div class="photo-frame">
+
+                    <img
+                        src="her-photo.jpg"
+                        alt="A special person"
+                    >
+
+                </div>
+
+                <div class="photo-heart heart-left">
+                    💗
+                </div>
+
+                <div class="photo-heart heart-right">
+                    💕
+                </div>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1 class="main-title">
+                You are my favorite
+                <span>person. ❤️</span>
+            </h1>
+
+
+            <!-- TYPEWRITER -->
+
+            <div class="letter">
+
+                <p id="typewriter"></p>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button id="finalBtn" class="final-button">
+                💗 There's one more thing...
+            </button>
+
+
+            <!-- FINAL -->
+
+            <section
+                id="finalMessage"
+                class="final-message hidden"
+            >
+
+                <div class="final-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    I Love You
+                </h2>
+
+                <p>
+                    More than this little website
+                    could ever explain. 🥹
+                </p>
+
+                <div class="infinity">
+                    ∞
+                </div>
+
+                <p class="forever">
+                    Today, tomorrow & always.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Optional music -->
+
+    <audio
+        id="music"
+        loop
+        preload="auto"
+    >
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
 
     <script src="script.js"></script>
+
 </body>
 </html>
