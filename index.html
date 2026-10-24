@@ -1,230 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="theme-color"
-        content="#09000d"
-    >
-
-    <title>Just For You ❤️</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09000d">
+  <title>Just For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Animated background -->
-    <div class="background">
-        <div class="orb orb1"></div>
-        <div class="orb orb2"></div>
-        <div class="orb orb3"></div>
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+
+  <!-- PASSWORD SCREEN -->
+  <section id="loginScreen" class="screen">
+    <div class="glass login">
+      <div class="lock">🔐</div>
+      <h1>A Little Secret</h1>
+      <p>This surprise is only for you ❤️</p>
+      <p class="hint">Hint: Your birthday 🎂</p>
+
+      <input id="password" type="password"
+        inputmode="numeric" maxlength="8"
+        placeholder="Enter birthday" autocomplete="off">
+
+      <button id="unlockBtn">Unlock My Surprise ✨</button>
+      <p id="error" class="error"></p>
+      <small id="attemptText"></small>
     </div>
-
-
-    <!-- ========================= -->
-    <!-- PASSWORD SCREEN -->
-    <!-- ========================= -->
-
-    <section id="loginScreen" class="screen">
-
-        <div class="login-card">
-
-            <div class="lock-icon">
-                🔐
-            </div>
-
-            <div class="sparkle">✦</div>
-
-            <h1>
-                Something is waiting for you...
-            </h1>
-
-            <p>
-                But only one special person can open it. ❤️
-            </p>
-
-            <div class="secret-hint">
-                🎂 Hint: Your special day
-            </div>
-
-            <input
-                type="password"
-                id="password"
-                inputmode="numeric"
-                maxlength="8"
-                placeholder="Enter the secret"
-                autocomplete="off"
-            >
-
-            <button id="unlockBtn">
-                ✨ Unlock
-            </button>
-
-            <div id="error"></div>
-
-            <div class="attempts">
-                <span id="attemptText"></span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ========================= -->
-    <!-- INTRO SCREEN -->
-    <!-- ========================= -->
-
-    <section id="opening" class="screen hidden">
-
-        <div class="intro-card">
-
-            <div class="mini-hearts">
-                💕 💗 💕
-            </div>
-
-            <div class="giant-heart">
-                ❤️
-            </div>
-
-            <h1>
-                Hey, beautiful...
-            </h1>
-
-            <p>
-                I made a tiny little corner of the internet
-                just for you.
-            </p>
-
-            <button id="openBtn">
-                💌 Open Your Surprise
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- ========================= -->
-    <!-- MAIN SURPRISE -->
-    <!-- ========================= -->
-
-    <main id="surprise" class="hidden">
-
-        <div id="particles"></div>
-
-        <div class="surprise-content">
-
-            <p class="eyebrow">
-                ✦ A little something from me to you ✦
-            </p>
-
-
-            <!-- PHOTO -->
-
-            <div class="photo-wrapper">
-
-                <div class="photo-glow"></div>
-
-                <div class="photo-frame">
-
-                    <img
-                        src="her-photo.jpg"
-                        alt="A special person"
-                    >
-
-                </div>
-
-                <div class="photo-heart heart-left">
-                    💗
-                </div>
-
-                <div class="photo-heart heart-right">
-                    💕
-                </div>
-
-            </div>
-
-
-            <!-- TITLE -->
-
-            <h1 class="main-title">
-                You are my favorite
-                <span>person. ❤️</span>
-            </h1>
-
-
-            <!-- TYPEWRITER -->
-
-            <div class="letter">
-
-                <p id="typewriter"></p>
-
-            </div>
-
-
-            <!-- BUTTON -->
-
-            <button id="finalBtn" class="final-button">
-                💗 There's one more thing...
-            </button>
-
-
-            <!-- FINAL -->
-
-            <section
-                id="finalMessage"
-                class="final-message hidden"
-            >
-
-                <div class="final-heart">
-                    ❤️
-                </div>
-
-                <h2>
-                    I Love You
-                </h2>
-
-                <p>
-                    More than this little website
-                    could ever explain. 🥹
-                </p>
-
-                <div class="infinity">
-                    ∞
-                </div>
-
-                <p class="forever">
-                    Today, tomorrow & always.
-                </p>
-
-            </section>
-
-        </div>
-
-    </main>
-
-
-    <!-- Optional music -->
-
-    <audio
-        id="music"
-        loop
-        preload="auto"
-    >
-        <source src="Zupiter___Jery_Brahma_-_dandise__Official_RG_First_Love_Pt._2_Song_(128k).mp3" type="audio/mpeg">
-    </audio>
-
-
-    <script src="script.js"></script>
-
+  </section>
+
+  <!-- INTRO SCREEN -->
+  <section id="opening" class="screen hidden">
+    <div class="intro">
+      <div class="big-heart">❤️</div>
+      <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+      <h1>Hey, beautiful...</h1>
+      <p>I made this little world just for you.</p>
+      <button id="openBtn">Open Your Surprise 💌</button>
+    </div>
+  </section>
+
+  <!-- VIDEO SURPRISE -->
+  <main id="surprise" class="hidden">
+    <div class="content">
+      <p class="eyebrow">MY FAVORITE PERSON 💗</p>
+      <h1 class="heading">A little world of you</h1>
+      <p class="subheading">
+        Every little moment makes me smile. ❤️
+      </p>
+      <p class="caption">
+       more ↓↓↓ 
+      </p>
+
+      <!-- Videos are created by JavaScript -->
+      <div id="videoUniverse" class="video-universe"></div>
+
+      <p class="caption">
+        scroll down 💕
+      </p>
+
+      <div class="letter">
+        <h2>Something from my heart 💌</h2>
+        <p id="letterText"></p>
+      </div>
+
+      <button id="finalBtn" class="final-button">
+        My Love 💗💙
+      </button>
+    </div>
+  </main>
+
+  <!-- FINAL LOVE ANIMATION -->
+  <section id="loveAccepted" class="love-accepted hidden">
+    <div id="loveRain"></div>
+
+    <div class="accepted-title">
+      <div class="final-heart">🫶💕</div>
+      <h1>I LOVE YOU ❤️</h1>
+      <p>My heart is yours, today and always. 💌</p>
+      <button id="replayBtn">Watch Your Surprise Again ↻</button>
+    </div>
+  </section>
+
+  <!-- YOUR SPECIAL BACKGROUND MUSIC -->
+  <audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn" class="music-btn hidden">
+    ♫ Play Music
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
