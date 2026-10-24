@@ -16,7 +16,7 @@ let musicStarted = false;
   Keep the video files beside index.html.
 */
 const videoFiles = [
-  "Snapchat-578223551.mp4",
+  "https://github.com/adb78161-code/Mine/blob/06f3e1da1ee8adf538ad47cf2028ee82a9f6ea3a/Snapchat-1002566367.mp4",
   "Snapchat-1002566367.mp4",
   "Snapchat-1334863849.mp4",
   "Snapchat-796184130.mp4"
