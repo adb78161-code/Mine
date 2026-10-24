@@ -16,10 +16,10 @@ let musicStarted = false;
   Keep the video files beside index.html.
 */
 const videoFiles = [
-  "video1.mp4",
-  "video2.mp4",
-  "video3.mp4",
-  "video4.mp4"
+  "Snapchat-578223551.mp4",
+  "Snapchat-1002566367.mp4",
+  "Snapchat-1334863849.mp4",
+  "Snapchat-796184130.mp4"
 ];
 
 const captions = [
